@@ -2,7 +2,9 @@
 # Author: Egbie
 #
 """
-This problem was taking from algoritm book.
+Problem taking from Data Structures and Algorithms - Rance D. Necaise_1020 book
+
+problem 1:3
 
 Implement a function or methods that accepts a Date
 and prints a calendar for the month of the given date. For example, if the
