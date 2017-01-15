@@ -1,7 +1,7 @@
+"""
 ###############################################################################
 # Author: Egbie
 #
-"""
 Problem taking from Data Structures and Algorithms - Rance D. Necaise_1020 book
 
 problem 1:3
@@ -33,8 +33,8 @@ class Calender(object):
         if year != None or month != None or day != None:
             self._date_obj = self._make_date_obj(year, month, 1)
         else:
-            self._date_obj = self._make_date_obj(date.year, date.month, 1)
-            self._year, self._month, self._day = date.year, date.month, 1 # initialise dates
+            self._date_obj = self._make_date_obj(self._date.year, self._date.month, 1)
+            self._year, self._month, self._day = self._date.year, self._date.month, 1 # initialise dates
 
         self._day = self._date_obj.strftime("%A") # get what day the first day of the month lands on.
         self._rows = self._make_calender_rows()    # create the rows for the calender.
@@ -165,7 +165,7 @@ class Calender(object):
 
     def _make_calender(self):
         """A private function that makes the calender """
-        
+
         idx = self.get_day_pos() # get the index position for the column
         days, max_days = 1, self.get_max_days_in_month() # max days equal maximum days in the month.
 
@@ -186,7 +186,7 @@ class Calender(object):
         Displays a calender to the output screen.
         """
         print('[+] Displaying calender....')
-        sleep(0.1)
+        sleep(0.01)
         print("\n{} {} {} {}".format('#'*13, self.get_month(True), self.get_year(), '#'*14))
         print("{:>9}{:>7}{:>6}{:>6}{:>6}{:>8}{:>9}".format("Sun", "Mon", "Tue",
                                                            "Wed", "Thu", "Fri",
@@ -205,3 +205,4 @@ class Calender(object):
                     pos = 0
                     print()
         print('\n')
+
