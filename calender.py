@@ -13,9 +13,8 @@ Date passed to the function contained the date 11/5/2007, the function
 should print the entire calender for february. If no date is given then it
 should default to the current month.
 
-Written in Python 3
-When run using the terminal the columns for the calender are properly aligned.
-If it is run on the idle the columns are not properly aligned.
+Written in python 3
+
 """
 ###############################################################################
 
@@ -205,17 +204,17 @@ class Calender(object):
         """
         print('[+] Displaying calender....')
         sleep(0.01)
-        print("\n{} {} {} {}".format('#'*13, self.get_month(True), self.get_year(), '#'*14))
-        print("{:>9}{:>7}{:>6}{:>6}{:>6}{:>8}{:>9}".format("Sun", "Mon", "Tue",
+        print("\n{} {} {} {}".format('#'*21, self.get_month(True), self.get_year(), '#'*21))
+        print("{:>9}{:>7}{:>8}{:>8}{:>8}{:>8}{:>8}".format("Sun", "Mon", "Tue",
                                                            "Wed", "Thu", "Fri",
                                                             "Sat"))
         pos = 0
         for row in self._rows:
             for day in row:
                 if day == '':
-                    print('{:2}'.format(day), end='')
+                    print('{}'.format(day), end='')
                 if len(str(day)) == 1:
-                    print("{:>9}".format(day), end='')
+                    print("{:>8}".format(day), end='')
                 else:
                     print("{:>8}".format(day), end='')
                 pos += 1
@@ -223,3 +222,4 @@ class Calender(object):
                     pos = 0
                     print()
         print('\n')
+
