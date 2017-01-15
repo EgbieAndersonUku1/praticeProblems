@@ -13,6 +13,9 @@ Date passed to the function contained the date 11/5/2007, the function
 should print the entire calender for february. If no date is given then it
 should default to the current month.
 
+Written in Python 3
+When run using the terminal the columns for the calender are properly aligned.
+If it is run on the idle the columns are not properly aligned.
 """
 ###############################################################################
 
