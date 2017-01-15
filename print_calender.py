@@ -38,14 +38,6 @@ class Calender(object):
         self.rows = self._make_calender_rows()  # create the rows for the calender.
         self._make_calender()                   # make the calender.
 
-    def set_date(self, year, month, day):
-        """Enables a new date to be set"""
-        if year and type(year) == int and month and type(month) == int \
-            and day and type(day) == int:
-            self._year, self._month, self._day = year, month, day
-        else:
-            raise TypeError('The values entered are of an incorrect type.')
-
     def is_leap_year(self):
         """Returns True if the year is a leap year"""
         return self.get_year() % 4 == 0 and (self.get_year() % 100 != 0 or \
