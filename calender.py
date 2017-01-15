@@ -165,8 +165,7 @@ class Calender(object):
 
     def _make_calender(self):
         """A private function that makes the calender """
-
-
+        
         idx = self.get_day_pos() # get the index position for the column
         days, max_days = 1, self.get_max_days_in_month() # max days equal maximum days in the month.
 
